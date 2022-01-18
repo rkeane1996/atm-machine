@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-apline
+ARG JAR_FILE=atm-machine/target/Atm-Simulator-Project-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
