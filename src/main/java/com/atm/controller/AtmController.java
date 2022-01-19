@@ -15,7 +15,7 @@ public class AtmController {
     private AtmService atmService;
 
     @GetMapping(value = "/checkBalance")
-    public Response checkAccountBalance(@RequestBody Request request) throws Exception {
+    public Response checkAccountBalance(@RequestBody Request request) {
         return atmService.assertPinIsCorrect(request) ? atmService.checkAccountBalance(request.getAccountNumber()) : new Response("Incorrect Pin");
     }
 
