@@ -1,7 +1,6 @@
 package com.atm;
 
 import com.atm.model.Account;
-import com.atm.model.Response;
 import com.atm.repository.AccountRepository;
 import com.atm.service.AtmService;
 import org.junit.Test;
@@ -26,8 +25,8 @@ public class ServiceTest {
     public void checkBalanceTest(){
         Mockito.when(accountRepository.getAccountBalance(123456789))
                 .thenReturn(200);
-        Response balance = atmService.checkAccountBalance(123456789);
-        assertEquals(200, balance.getBalance());
+        int balance = atmService.checkAccountBalance(123456789);
+        assertEquals(200, balance);
     }
 
     @Test

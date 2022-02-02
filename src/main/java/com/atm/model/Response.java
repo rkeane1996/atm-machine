@@ -1,7 +1,6 @@
 package com.atm.model;
 
 import lombok.Data;
-import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 

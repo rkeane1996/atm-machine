@@ -25,4 +25,8 @@ public class Account {
         this.openingBalance = openingBalance;
         this.overdraft = overdraft;
     }
+
+    public void reduceBalance(int amount){
+        this.openingBalance -= amount;
+    }
 }
